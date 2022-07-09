@@ -2386,7 +2386,72 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
          <property name="horizontalSpacing">
           <number>9</number>
          </property>
-         <item row="0" column="3">
+        <item row="0" column="0">
+          <widget class="QCheckBox" name="checkBoxTogglePlayButton">
+           <property name="text">
+            <string>Toggle play [B]</string>
+           </property>
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="checkBoxNextTrackButton">
+           <property name="text">
+            <string>Next track [N]</string>
+           </property>
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QCheckBox" name="checkBoxPreviousTrackButton">
+           <property name="text">
+            <string>Previous track [V]</string>
+           </property>
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        <item row="0" column="3">
+          <widget class="QCheckBox" name="checkBoxPhoneButton">
+           <property name="text">
+            <string>Phone [P]</string>
+           </property>
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QCheckBox" name="checkBoxCallEndButton">
+           <property name="text">
+            <string>Call end [O]</string>
+           </property>
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        <!-- <item row="0" column="3">
           <widget class="QCheckBox" name="checkBoxUpButton">
            <property name="text">
             <string>Up [Up]</string>
@@ -2399,64 +2464,43 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
             <string>Left [Left]</string>
            </property>
           </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QCheckBox" name="checkBoxPreviousTrackButton">
-           <property name="text">
-            <string>Previous track [V]</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
+         </item> -->
+         <!-- <item row="0" column="0">
           <widget class="QCheckBox" name="checkBoxPlayButton">
            <property name="text">
             <string>Play [X]</string>
            </property>
           </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QCheckBox" name="checkBoxCallEndButton">
-           <property name="text">
-            <string>Call end [O]</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QCheckBox" name="checkBoxTogglePlayButton">
-           <property name="text">
-            <string>Toggle play [B]</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
+         </item> -->
+         <!-- <item row="1" column="2">
           <widget class="QCheckBox" name="checkBoxVoiceCommandButton">
            <property name="text">
             <string>Voice command [M]</string>
            </property>
           </widget>
-         </item>
-         <item row="3" column="3">
+         </item> -->
+         <!-- <item row="3" column="3">
           <widget class="QCheckBox" name="checkBoxBackButton">
            <property name="text">
             <string>Back [Esc]</string>
            </property>
           </widget>
-         </item>
-         <item row="1" column="0">
+         </item> -->
+         <!-- <item row="1" column="0">
           <widget class="QCheckBox" name="checkBoxPauseButton">
            <property name="text">
             <string>Pause [C]</string>
            </property>
           </widget>
-         </item>
-         <item row="2" column="1">
+         </item> -->
+         <!-- <item row="2" column="1">
           <widget class="QCheckBox" name="checkBoxHomeButton">
            <property name="text">
             <string>Home [H]</string>
            </property>
           </widget>
-         </item>
-         <item row="0" column="1">
+         </item> -->
+         <!-- <item row="0" column="1">
           <widget class="QCheckBox" name="checkBoxEnterButton">
            <property name="text">
             <string>Enter [Enter]</string>
@@ -2476,15 +2520,15 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
             <string>Nav [F]</string>
            </property>
           </widget>
-         </item>
-         <item row="2" column="3">
+         </item> -->
+         <!-- <item row="2" column="3">
           <widget class="QCheckBox" name="checkBoxScrollWheelButton">
            <property name="text">
             <string>Scroll wheel [1] / [2]</string>
            </property>
           </widget>
-         </item>
-         <item row="0" column="4">
+         </item> -->
+         <!-- <item row="0" column="4">
           <widget class="QPushButton" name="pushButtonSelectAll">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2502,29 +2546,15 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
             <string>Select all</string>
            </property>
           </widget>
-         </item>
-         <item row="3" column="2">
+         </item> -->
+         <!-- <item row="3" column="2">
           <widget class="QCheckBox" name="checkBoxRightButton">
            <property name="text">
             <string>Right [Right]</string>
            </property>
           </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QCheckBox" name="checkBoxPhoneButton">
-           <property name="text">
-            <string>Phone [P]</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QCheckBox" name="checkBoxNextTrackButton">
-           <property name="text">
-            <string>Next track [N]</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="4">
+         </item> -->
+         <!-- <item row="3" column="4">
           <widget class="QPushButton" name="pushButtonClearSelection">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2542,7 +2572,7 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
             <string>Clear selection</string>
            </property>
           </widget>
-         </item>
+         </item> -->
         </layout>
        </widget>
       </item>
