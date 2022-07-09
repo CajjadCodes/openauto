@@ -1648,6 +1648,9 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
                  <property name="checked">
                   <bool>true</bool>
                  </property>
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -1657,6 +1660,9 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
                  </property>
                  <property name="checked">
                   <bool>true</bool>
+                 </property>
+                 <property name="enabled">
+                  <bool>false</bool>
                  </property>
                 </widget>
                </item>
