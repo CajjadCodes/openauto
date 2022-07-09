@@ -233,7 +233,8 @@ void SettingsWindow::onSave()
     QRect videoMargins(0, 0, ui_->spinBoxVideoMarginWidth->value(), ui_->spinBoxVideoMarginHeight->value());
     configuration_->setVideoMargins(std::move(videoMargins));
 
-    configuration_->setTouchscreenEnabled(ui_->checkBoxEnableTouchscreen->isChecked());
+    configuration_->setTouchscreenEnabled(true);
+    // configuration_->setTouchscreenEnabled(ui_->checkBoxEnableTouchscreen->isChecked());
     this->saveButtonCheckBoxes();
 
     configuration_->playerButtonControl(ui_->checkBoxPlayerControl->isChecked());
@@ -520,7 +521,8 @@ void SettingsWindow::load()
     ui_->spinBoxVideoMarginWidth->setValue(videoMargins.width());
     ui_->spinBoxVideoMarginHeight->setValue(videoMargins.height());
 
-    ui_->checkBoxEnableTouchscreen->setChecked(configuration_->getTouchscreenEnabled());
+    ui_->checkBoxEnableTouchscreen->setChecked(true);
+    // ui_->checkBoxEnableTouchscreen->setChecked(configuration_->getTouchscreenEnabled());
     this->loadButtonCheckBoxes();
     ui_->checkBoxPlayerControl->setChecked(configuration_->playerButtonControl());
 
