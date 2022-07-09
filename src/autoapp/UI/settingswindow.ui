@@ -992,9 +992,12 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
               <property name="checked">
                <bool>true</bool>
               </property>
+              <property name="disabled">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
-            <item>
+            <!-- <item>
              <widget class="QRadioButton" name="radioButton60FPS">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -1006,7 +1009,7 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
                <string>60 FPS</string>
               </property>
              </widget>
-            </item>
+            </item> -->
            </layout>
           </widget>
          </item>
@@ -1028,7 +1031,7 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
             <property name="bottomMargin">
              <number>2</number>
             </property>
-            <item row="1" column="3">
+            <!-- <item row="1" column="3">
              <widget class="QRadioButton" name="radioButton720p">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -1053,7 +1056,7 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
                <string>1080p</string>
               </property>
              </widget>
-            </item>
+            </item> -->
             <item row="1" column="2">
              <widget class="QRadioButton" name="radioButton480p">
               <property name="sizePolicy">
@@ -1066,6 +1069,9 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
                <string>480p</string>
               </property>
               <property name="checked">
+               <bool>true</bool>
+              </property>
+              <property name="disabled">
                <bool>true</bool>
               </property>
              </widget>
