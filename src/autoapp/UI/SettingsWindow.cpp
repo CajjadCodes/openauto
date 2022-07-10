@@ -47,8 +47,8 @@ SettingsWindow::SettingsWindow(configuration::IConfiguration::Pointer configurat
     ui_->setupUi(this);
     connect(ui_->pushButtonCancel, &QPushButton::clicked, this, &SettingsWindow::close);
     connect(ui_->pushButtonSave, &QPushButton::clicked, this, &SettingsWindow::onSave);
-    connect(ui_->pushButtonUnpair , &QPushButton::clicked, this, &SettingsWindow::unpairAll);
-    connect(ui_->pushButtonUnpair , &QPushButton::clicked, this, &SettingsWindow::close);
+    // connect(ui_->pushButtonUnpair , &QPushButton::clicked, this, &SettingsWindow::unpairAll);
+    // connect(ui_->pushButtonUnpair , &QPushButton::clicked, this, &SettingsWindow::close);
     connect(ui_->horizontalSliderScreenDPI, &QSlider::valueChanged, this, &SettingsWindow::onUpdateScreenDPI);
     connect(ui_->horizontalSliderAlphaTrans, &QSlider::valueChanged, this, &SettingsWindow::onUpdateAlphaTrans);
     connect(ui_->horizontalSliderDay, &QSlider::valueChanged, this, &SettingsWindow::onUpdateBrightnessDay);
@@ -63,9 +63,9 @@ SettingsWindow::SettingsWindow(configuration::IConfiguration::Pointer configurat
     connect(ui_->horizontalSliderLux3, &QSlider::valueChanged, this, &SettingsWindow::onUpdateLux3);
     connect(ui_->horizontalSliderLux4, &QSlider::valueChanged, this, &SettingsWindow::onUpdateLux4);
     connect(ui_->horizontalSliderLux5, &QSlider::valueChanged, this, &SettingsWindow::onUpdateLux5);
-    connect(ui_->radioButtonUseExternalBluetoothAdapter, &QRadioButton::clicked, [&](bool checked) { ui_->lineEditExternalBluetoothAdapterAddress->setEnabled(checked); });
-    connect(ui_->radioButtonDisableBluetooth, &QRadioButton::clicked, [&]() { ui_->lineEditExternalBluetoothAdapterAddress->setEnabled(false); });
-    connect(ui_->radioButtonUseLocalBluetoothAdapter, &QRadioButton::clicked, [&]() { ui_->lineEditExternalBluetoothAdapterAddress->setEnabled(false); });
+    // connect(ui_->radioButtonUseExternalBluetoothAdapter, &QRadioButton::clicked, [&](bool checked) { ui_->lineEditExternalBluetoothAdapterAddress->setEnabled(checked); });
+    // connect(ui_->radioButtonDisableBluetooth, &QRadioButton::clicked, [&]() { ui_->lineEditExternalBluetoothAdapterAddress->setEnabled(false); });
+    // connect(ui_->radioButtonUseLocalBluetoothAdapter, &QRadioButton::clicked, [&]() { ui_->lineEditExternalBluetoothAdapterAddress->setEnabled(false); });
     // connect(ui_->pushButtonClearSelection, &QPushButton::clicked, std::bind(&SettingsWindow::setButtonCheckBoxes, this, false));
     // connect(ui_->pushButtonSelectAll, &QPushButton::clicked, std::bind(&SettingsWindow::setButtonCheckBoxes, this, true));
     connect(ui_->pushButtonResetToDefaults, &QPushButton::clicked, this, &SettingsWindow::onResetToDefaults);
@@ -97,9 +97,9 @@ SettingsWindow::SettingsWindow(configuration::IConfiguration::Pointer configurat
     ui_->tab8->hide();
     ui_->tab9->hide();
 
-    ui_->horizontalGroupBox->hide();
-    ui_->labelBluetoothAdapterAddress->hide();
-    ui_->lineEditExternalBluetoothAdapterAddress->hide();
+    // ui_->horizontalGroupBox->hide();
+    // ui_->labelBluetoothAdapterAddress->hide();
+    // ui_->lineEditExternalBluetoothAdapterAddress->hide();
     ui_->labelTestInProgress->hide();
 
     connect(ui_->pushButtonTab1, &QPushButton::clicked, this, &SettingsWindow::show_tab1);
@@ -239,20 +239,20 @@ void SettingsWindow::onSave()
 
     configuration_->playerButtonControl(ui_->checkBoxPlayerControl->isChecked());
 
-    if(ui_->radioButtonDisableBluetooth->isChecked())
-    {
-        configuration_->setBluetoothAdapterType(configuration::BluetoothAdapterType::NONE);
-    }
-    else if(ui_->radioButtonUseLocalBluetoothAdapter->isChecked())
-    {
-        configuration_->setBluetoothAdapterType(configuration::BluetoothAdapterType::LOCAL);
-    }
-    else if(ui_->radioButtonUseExternalBluetoothAdapter->isChecked())
-    {
-        configuration_->setBluetoothAdapterType(configuration::BluetoothAdapterType::REMOTE);
-    }
+    // if(ui_->radioButtonDisableBluetooth->isChecked())
+    // {
+    //     configuration_->setBluetoothAdapterType(configuration::BluetoothAdapterType::NONE);
+    // }
+    // else if(ui_->radioButtonUseLocalBluetoothAdapter->isChecked())
+    // {
+    //     configuration_->setBluetoothAdapterType(configuration::BluetoothAdapterType::LOCAL);
+    // }
+    // else if(ui_->radioButtonUseExternalBluetoothAdapter->isChecked())
+    // {
+    //     configuration_->setBluetoothAdapterType(configuration::BluetoothAdapterType::REMOTE);
+    // }
 
-    configuration_->setBluetoothRemoteAdapterAddress(ui_->lineEditExternalBluetoothAdapterAddress->text().toStdString());
+    // configuration_->setBluetoothRemoteAdapterAddress(ui_->lineEditExternalBluetoothAdapterAddress->text().toStdString());
 
     // configuration_->setMusicAudioChannelEnabled(ui_->checkBoxMusicAudioChannel->isChecked());
     // configuration_->setSpeechAudioChannelEnabled(ui_->checkBoxSpeechAudioChannel->isChecked());
@@ -344,13 +344,13 @@ void SettingsWindow::onSave()
     params.append("#");
     params.append( std::string(ui_->comboBoxCam->currentText().toStdString()) );
     params.append("#");
-    if (ui_->checkBoxBluetoothAutoPair->isChecked()) {
-        params.append("1");
-    } else {
-        params.append("0");
-    }
+    // if (ui_->checkBoxBluetoothAutoPair->isChecked()) {
+    //     params.append("1");
+    // } else {
+    //     params.append("0");
+    // }
     params.append("#");
-    params.append( std::string(ui_->comboBoxBluetooth->currentText().toStdString()) );
+    // params.append( std::string(ui_->comboBoxBluetooth->currentText().toStdString()) );
     params.append("#");
     if (ui_->checkBoxHardwareSave->isChecked()) {
         params.append("1");
@@ -360,7 +360,7 @@ void SettingsWindow::onSave()
     params.append("#");
     params.append( std::string(ui_->comboBoxUSBCam->currentText().toStdString()) );
     params.append("#");
-    params.append( std::string(ui_->comboBoxLS->currentText().split(" ")[0].toStdString()) );
+    // params.append( std::string(ui_->comboBoxLS->currentText().split(" ")[0].toStdString()) );
     params.append("#");
     params.append( std::string(ui_->comboBoxDayNight->currentText().toStdString()) );
     params.append("#");
@@ -526,11 +526,11 @@ void SettingsWindow::load()
     this->loadButtonCheckBoxes();
     ui_->checkBoxPlayerControl->setChecked(configuration_->playerButtonControl());
 
-    ui_->radioButtonDisableBluetooth->setChecked(configuration_->getBluetoothAdapterType() == configuration::BluetoothAdapterType::NONE);
-    ui_->radioButtonUseLocalBluetoothAdapter->setChecked(configuration_->getBluetoothAdapterType() == configuration::BluetoothAdapterType::LOCAL);
-    ui_->radioButtonUseExternalBluetoothAdapter->setChecked(configuration_->getBluetoothAdapterType() == configuration::BluetoothAdapterType::REMOTE);
-    ui_->lineEditExternalBluetoothAdapterAddress->setEnabled(configuration_->getBluetoothAdapterType() == configuration::BluetoothAdapterType::REMOTE);
-    ui_->lineEditExternalBluetoothAdapterAddress->setText(QString::fromStdString(configuration_->getBluetoothRemoteAdapterAddress()));
+    // ui_->radioButtonDisableBluetooth->setChecked(configuration_->getBluetoothAdapterType() == configuration::BluetoothAdapterType::NONE);
+    // ui_->radioButtonUseLocalBluetoothAdapter->setChecked(configuration_->getBluetoothAdapterType() == configuration::BluetoothAdapterType::LOCAL);
+    // ui_->radioButtonUseExternalBluetoothAdapter->setChecked(configuration_->getBluetoothAdapterType() == configuration::BluetoothAdapterType::REMOTE);
+    // ui_->lineEditExternalBluetoothAdapterAddress->setEnabled(configuration_->getBluetoothAdapterType() == configuration::BluetoothAdapterType::REMOTE);
+    // ui_->lineEditExternalBluetoothAdapterAddress->setText(QString::fromStdString(configuration_->getBluetoothRemoteAdapterAddress()));
 
     // ui_->checkBoxMusicAudioChannel->setChecked(configuration_->musicAudioChannelEnabled());
     // ui_->checkBoxSpeechAudioChannel->setChecked(configuration_->speechAudioChannelEnabled());
@@ -717,10 +717,10 @@ void SettingsWindow::onUpdateBrightness5(int value)
     ui_->valueBrightness5->setText(QString::number(value));
 }
 
-void SettingsWindow::unpairAll()
-{
-    system("/usr/local/bin/crankshaft bluetooth unpair &");
-}
+// void SettingsWindow::unpairAll()
+// {
+//     system("/usr/local/bin/crankshaft bluetooth unpair &");
+// }
 
 void SettingsWindow::setTime()
 { 
@@ -1045,43 +1045,43 @@ void SettingsWindow::loadSystemValues()
         }
 
         // set bluetooth
-        if (configuration_->getCSValue("ENABLE_BLUETOOTH") == "1") {
-            // check external bluetooth enabled
-            if (configuration_->getCSValue("EXTERNAL_BLUETOOTH") == "1") {
-                ui_->radioButtonUseExternalBluetoothAdapter->setChecked(true);
-            } else {
-                ui_->radioButtonUseLocalBluetoothAdapter->setChecked(true);
-            }
-            // mac
-            //ui_->lineEditExternalBluetoothAdapterAddress->setText(getparams[37]);
-        } else {
-            ui_->radioButtonDisableBluetooth->setChecked(true);
-            ui_->lineEditExternalBluetoothAdapterAddress->setText("");
-        }
-        if (configuration_->getCSValue("ENABLE_PAIRABLE") == "1") {
-            ui_->checkBoxBluetoothAutoPair->setChecked(true);
-        } else {
-            ui_->checkBoxBluetoothAutoPair->setChecked(false);
-        }
-        // set bluetooth type
-        if (configuration_->getCSValue("ENABLE_BLUETOOTH") == "1") {
-            QString bt = configuration_->getParamFromFile("/boot/config.txt","dtoverlay=pi3-disable-bt");
-            if (bt.contains("pi3-disable-bt")) {
-                ui_->comboBoxBluetooth->setCurrentText("external");
-            } else {
-                ui_->comboBoxBluetooth->setCurrentText("builtin");
-            }
-        } else {
-            ui_->comboBoxBluetooth->setCurrentText("none");
-        }
+        // if (configuration_->getCSValue("ENABLE_BLUETOOTH") == "1") {
+        //     // check external bluetooth enabled
+        //     if (configuration_->getCSValue("EXTERNAL_BLUETOOTH") == "1") {
+        //         ui_->radioButtonUseExternalBluetoothAdapter->setChecked(true);
+        //     } else {
+        //         ui_->radioButtonUseLocalBluetoothAdapter->setChecked(true);
+        //     }
+        //     // mac
+        //     //ui_->lineEditExternalBluetoothAdapterAddress->setText(getparams[37]);
+        // } else {
+        //     ui_->radioButtonDisableBluetooth->setChecked(true);
+        //     ui_->lineEditExternalBluetoothAdapterAddress->setText("");
+        // }
+        // if (configuration_->getCSValue("ENABLE_PAIRABLE") == "1") {
+        //     ui_->checkBoxBluetoothAutoPair->setChecked(true);
+        // } else {
+        //     ui_->checkBoxBluetoothAutoPair->setChecked(false);
+        // }
+        // // set bluetooth type
+        // if (configuration_->getCSValue("ENABLE_BLUETOOTH") == "1") {
+        //     QString bt = configuration_->getParamFromFile("/boot/config.txt","dtoverlay=pi3-disable-bt");
+        //     if (bt.contains("pi3-disable-bt")) {
+        //         ui_->comboBoxBluetooth->setCurrentText("external");
+        //     } else {
+        //         ui_->comboBoxBluetooth->setCurrentText("builtin");
+        //     }
+        // } else {
+        //     ui_->comboBoxBluetooth->setCurrentText("none");
+        // }
 
         // set lightsensor
         if (std::ifstream("/etc/cs_lightsensor")) {
-            ui_->comboBoxLS->setCurrentIndex(1);
+            // ui_->comboBoxLS->setCurrentIndex(1);
             ui_->groupBoxSliderDay->hide();
             ui_->groupBoxSliderNight->hide();
         } else {
-            ui_->comboBoxLS->setCurrentIndex(0);
+            // ui_->comboBoxLS->setCurrentIndex(0);
             ui_->pushButtonTab9->hide();
             ui_->groupBoxSliderDay->show();
             ui_->groupBoxSliderNight->show();

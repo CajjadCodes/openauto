@@ -44,7 +44,7 @@
 #include <QFileSystemWatcher>
 #include <QKeyEvent>
 
-#include <QBluetoothLocalDevice>
+// #include <QBluetoothLocalDevice>
 //#include <QtBluetooth>
 
 namespace Ui
@@ -118,7 +118,7 @@ private slots:
     void cameraControlHide();
     void toggleExit();
     void createDebuglog();
-    void setPairable();
+    // void setPairable();
     void toggleMuteButton();
     void toggleGUI();
     void setMute();
@@ -159,7 +159,7 @@ private slots:
     void resetRetryUSBMessage();
     // void updateNetworkInfo();
     bool check_file_exist(const char *filename);
-    void hostModeStateChanged(QBluetoothLocalDevice::HostMode);
+    // void hostModeStateChanged(QBluetoothLocalDevice::HostMode);
 
     //void on_AlbumCoverListView_clicked(const QModelIndex &index);
     void on_AlbumCoverListView_clicked(const QModelIndex &index);
@@ -241,7 +241,7 @@ private:
     bool dashCamRecording = false;
     bool systemDebugmode = false;
 
-    bool bluetoothEnabled = false;
+    // bool bluetoothEnabled = false;
 
     bool toggleMute = false;
     bool oldGUIStyle = false;
@@ -271,7 +271,7 @@ private:
     int camera_ycorection;
     int camera_zoom;
 
-    QBluetoothLocalDevice *localDevice;
+    // QBluetoothLocalDevice *localDevice;
 
 protected:
     void keyPressEvent(QKeyEvent *event);

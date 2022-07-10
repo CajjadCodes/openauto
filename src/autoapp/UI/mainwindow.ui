@@ -751,7 +751,7 @@ border-radius: 4px;
                </property>
               </spacer>
              </item>
-             <item>
+             <!-- <item>
               <widget class="QLabel" name="labelBluetoothPairable">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -822,7 +822,7 @@ border-radius: 4px;
                 <string>BT-Pairing</string>
                </property>
               </widget>
-             </item>
+             </item> -->
              <item>
               <widget class="QLabel" name="Digital_clock">
                <property name="sizePolicy">

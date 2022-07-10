@@ -2802,7 +2802,7 @@ QSlider::groove:horizontal { background: #6d6d6d; height: 32px;}</string>
       <property name="bottomMargin">
        <number>2</number>
       </property>
-      <item>
+      <!-- <item>
        <widget class="QGroupBox" name="horizontalGroupBox">
         <property name="enabled">
          <bool>true</bool>
@@ -3025,8 +3025,8 @@ outline: none;</string>
           </widget>
          </item>
         </layout>
-       </widget>
-      </item>
+       </widget> 
+      </item> -->
       <item>
        <widget class="QWidget" name="horizontalWidget" native="true">
         <property name="sizePolicy">
@@ -8832,7 +8832,7 @@ QComboBox::item:selected {
              </item>
             </widget>
            </item>
-           <item row="1" column="0" colspan="2">
+           <!-- <item row="1" column="0" colspan="2">
             <widget class="QWidget" name="horizontalWidget" native="true">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -9074,7 +9074,7 @@ QComboBox::item:selected {
               </item>
              </layout>
             </widget>
-           </item>
+           </item> -->
            <item row="2" column="0">
             <widget class="QLabel" name="labelHardwareRTC">
              <property name="sizePolicy">
