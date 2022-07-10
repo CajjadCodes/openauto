@@ -89,8 +89,8 @@ signals:
     void cameraZoomMinus();
     void cameraFlipX();
     void cameraFlipY();
-    void openConnectDialog();
-    void openWifiDialog();
+    // void openConnectDialog();
+    // void openWifiDialog();
     void openUpdateDialog();
     void showBrightnessSlider();
     void showVolumeSlider();
@@ -157,7 +157,7 @@ private slots:
     void setTrigger();
     void setRetryUSBConnect();
     void resetRetryUSBMessage();
-    void updateNetworkInfo();
+    // void updateNetworkInfo();
     bool check_file_exist(const char *filename);
     void hostModeStateChanged(QBluetoothLocalDevice::HostMode);
 
@@ -182,7 +182,7 @@ private:
 
     char nightModeFile[32] = "/tmp/night_mode_enabled";
     char devModeFile[32] = "/tmp/dev_mode_enabled";
-    char wifiButtonFile[32] = "/etc/button_wifi_visible";
+    // char wifiButtonFile[32] = "/etc/button_wifi_visible";
     char cameraButtonFile[32] = "/etc/button_camera_visible";
     char brightnessButtonFile[32] = "/etc/button_brightness_visible";
     char debugModeFile[32] = "/tmp/usb_debug_mode";
@@ -218,7 +218,7 @@ private:
 
     bool customBrightnessControl = false;
 
-    bool wifiButtonForce = false;
+    // bool wifiButtonForce = false;
     bool cameraButtonForce = false;
     bool brightnessButtonForce = false;
 
@@ -255,7 +255,7 @@ private:
     bool c5ButtonForce = false;
     bool c6ButtonForce = false;
 
-    bool hotspotActive = false;
+    // bool hotspotActive = false;
     int currentPlaylistIndex = 0;
     bool background_set = false;
     bool mediacontentchanged = true;

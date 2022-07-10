@@ -1614,7 +1614,7 @@ USB Device</string>
            </layout>
           </widget>
          </item>
-         <item>
+         <!-- <item>
           <widget class="QWidget" name="AAWIFIWidget" native="true">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -1665,8 +1665,8 @@ color: rgb(255, 255, 255);
                </size>
               </property>
              </widget>
-            </item>
-            <item>
+            </item> -->
+            <!-- <item>
              <widget class="QPushButton" name="pushButtonNoWiFiDevice">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -1698,7 +1698,7 @@ WiFi Clients</string>
             </item>
            </layout>
           </widget>
-         </item>
+         </item>-->
          <item>
           <widget class="QPushButton" name="pushButtonDay">
            <property name="sizePolicy">
@@ -3070,7 +3070,7 @@ Device</string>
                 </layout>
                </widget>
               </item>
-              <item>
+              <!-- <item>
                <widget class="QWidget" name="AAWIFIWidget2" native="true">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
@@ -3132,8 +3132,8 @@ outline: none;</string>
                     </size>
                    </property>
                   </widget>
-                 </item>
-                 <item>
+                 </item> -->
+                 <!-- <item>
                   <widget class="QPushButton" name="pushButtonNoWiFiDevice2">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
@@ -3385,7 +3385,7 @@ outline: none;</string>
                  </size>
                 </property>
                </widget>
-              </item>
+              </item>-->
              </layout>
             </widget>
            </item>

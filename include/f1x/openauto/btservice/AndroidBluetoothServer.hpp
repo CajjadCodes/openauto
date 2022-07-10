@@ -53,13 +53,13 @@ private:
 
     QByteArray buffer;
 
-    void handleWifiInfoRequest(QByteArray &buffer, uint16_t length);
+    // void handleWifiInfoRequest(QByteArray &buffer, uint16_t length);
 
     void sendMessage(const google::protobuf::Message &message, uint16_t type);
 
-    void handleWifiSecurityRequest(QByteArray &buffer, uint16_t length);
+    // void handleWifiSecurityRequest(QByteArray &buffer, uint16_t length);
 
-    void handleWifiInfoRequestResponse(QByteArray &buffer, uint16_t length);
+    // void handleWifiInfoRequestResponse(QByteArray &buffer, uint16_t length);
 
     const ::std::string getIP4_(const QString intf);
 };

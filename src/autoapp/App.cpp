@@ -193,26 +193,26 @@ void App::waitForDevice()
     promise->then(std::bind(&App::aoapDeviceHandler, this->shared_from_this(), std::placeholders::_1),
                   std::bind(&App::onUSBHubError, this->shared_from_this(), std::placeholders::_1));
     usbHub_->start(std::move(promise));
-    startServerSocket();
+    // startServerSocket();
 }
 
-void App::startServerSocket() {
-    strand_.dispatch([this, self = this->shared_from_this()]() {
-        OPENAUTO_LOG(info) << "Listening for WIFI clients on port 5000";
-        auto socket = std::make_shared<boost::asio::ip::tcp::socket>(ioService_);
-        acceptor_.async_accept(
-                *socket,
-                std::bind(&App::handleNewClient, this, socket, std::placeholders::_1)
-        );
-    });
-}
+// void App::startServerSocket() {
+//     strand_.dispatch([this, self = this->shared_from_this()]() {
+//         OPENAUTO_LOG(info) << "Listening for WIFI clients on port 5000";
+//         auto socket = std::make_shared<boost::asio::ip::tcp::socket>(ioService_);
+//         acceptor_.async_accept(
+//                 *socket,
+//                 std::bind(&App::handleNewClient, this, socket, std::placeholders::_1)
+//         );
+//     });
+// }
 
-void App::handleNewClient(std::shared_ptr<boost::asio::ip::tcp::socket> socket, const boost::system::error_code &err) {
-    OPENAUTO_LOG(info) << "WIFI Client connected";
-    if (!err) {
-        start(std::move(socket));
-    }
-}
+// void App::handleNewClient(std::shared_ptr<boost::asio::ip::tcp::socket> socket, const boost::system::error_code &err) {
+//     OPENAUTO_LOG(info) << "WIFI Client connected";
+//     if (!err) {
+//         start(std::move(socket));
+//     }
+// }
 
 void App::pause()
 {

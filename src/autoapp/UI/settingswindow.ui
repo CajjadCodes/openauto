@@ -142,7 +142,7 @@ outline: none;
        </property>
       </widget>
      </item>
-     <item>
+     <!-- <item>
       <widget class="QPushButton" name="pushButtonTab5">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -166,7 +166,7 @@ outline: none;
         <string>BT / WiFi</string>
        </property>
       </widget>
-     </item>
+     </item> -->
      <item>
       <widget class="QPushButton" name="pushButtonTab6">
        <property name="sizePolicy">
@@ -3048,7 +3048,7 @@ outline: none;</string>
          <property name="bottomMargin">
           <number>0</number>
          </property>
-         <item>
+         <!-- <item>
           <widget class="QGroupBox" name="groupBox">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -3967,8 +3967,8 @@ outline: none;</string>
          </item>
         </layout>
        </widget>
-      </item>
-      <item>
+      </item> -->
+      <!-- <item>
        <widget class="QGroupBox" name="groupBoxNetworking">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -4289,7 +4289,7 @@ outline: none;</string>
             </widget>
            </item>
           </layout>
-         </item>
+         </item> -->
         </layout>
        </widget>
       </item>
